@@ -1,12 +1,20 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
   transpileDependencies: true,
 
   pluginOptions: {
     autoRouting: {
-      chunkNamePrefix: 'page-'
-    }
+      chunkNamePrefix: "page-",
+    },
   },
 
-  
-})
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `
+          @import "@/scss/main.scss";
+        `,
+      },
+    },
+  },
+});
