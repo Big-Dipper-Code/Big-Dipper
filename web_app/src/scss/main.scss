@@ -1,1 +1,6 @@
-@import "default/variables";
+@import "./default/variables";
+
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap-vue-3/dist/bootstrap-vue-3.css";
+
+@import "./overwrite/bootstrap/button";

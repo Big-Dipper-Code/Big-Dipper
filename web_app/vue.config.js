@@ -7,14 +7,4 @@ module.exports = defineConfig({
       chunkNamePrefix: "page-",
     },
   },
-
-  css: {
-    loaderOptions: {
-      sass: {
-        additionalData: `
-          @import "@/scss/main.scss";
-        `,
-      },
-    },
-  },
 });
