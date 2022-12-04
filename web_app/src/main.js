@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import BootstrapVue3 from "bootstrap-vue-3";
-import stores from "@/stores";
+import stores from "@/store";
 
 import "./styles";
 

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import QuestionView from "@/view/AlgorithmView/QuestionView";
+import QuestionView from "@/views/AlgorithmView/QuestionView";
 export default {
   name: "AlgorithmView",
   components: { QuestionView },
