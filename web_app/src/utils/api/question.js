@@ -1,14 +1,16 @@
 async function getQuestionItem(question_id) {
+  // let result = null
   // await axios
   //   .get(`/api/question/${question_id}/`)
   //   .then((response) => {
-  //     commit("setQuestionItem", response.data);
+  //     result = response.data;
   //   })
   //   .catch((error) => {
   //     console.log(error);
   //   });
+  // return result;
   console.log("question_id: ", question_id);
-  return {
+  let result = {
     id: 1,
     title: "Question 1",
     description:
@@ -23,6 +25,7 @@ async function getQuestionItem(question_id) {
       updated_at: "2021-01-01",
     },
   };
+  return result;
 }
 
 export { getQuestionItem };
