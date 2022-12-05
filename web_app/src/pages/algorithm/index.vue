@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import AlgorithmView from "@/view/AlgorithmView";
+import AlgorithmView from "@/views/AlgorithmView";
 export default {
   name: "Algorithm",
   components: { AlgorithmView },
