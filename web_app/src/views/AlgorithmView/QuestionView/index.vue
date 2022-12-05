@@ -6,28 +6,31 @@
 
 <script>
 import MarkdownViewer from "@/components/MarkdownViewer";
-import { mapState, mapActions } from "vuex";
+import { useStore } from "vuex";
+import { computed, onMounted } from "vue";
 
 export default {
   name: "QuestionView",
   components: { MarkdownViewer },
   setup() {
-    //methods
+    const store = useStore();
 
-    //computed
-    return {};
-  },
+    //question_item
+    const loadQuestionItem = (q_id) =>
+      store.dispatch("question/loadQuestionItem", q_id);
+    const question_item = computed(() => store.state.question.question_item);
+    onMounted(() => {
+      loadQuestionItem();
+    });
 
-  methods: {
-    ...mapActions("question", ["getQuestionItem"]),
-  },
-  mounted() {
-    this.getQuestionItem();
-  },
-  computed: {
-    ...mapState({
-      question_item: (state) => state.question.question_item,
-    }),
+    onMounted(() => {
+      console.log("QuestionView mounted");
+    });
+
+    return {
+      question_item,
+      loadQuestionItem,
+    };
   },
 };
 </script>

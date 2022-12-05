@@ -1,4 +1,4 @@
-import { getQuestionItem } from "@/utils/api/question";
+import questionApi from "@/utils/api/questionApi";
 
 const question = {
   namespaced: true,
@@ -12,8 +12,8 @@ const question = {
     },
   },
   actions: {
-    async getQuestionItem({ commit }, question_id) {
-      const question_item = await getQuestionItem(question_id);
+    async loadQuestionItem({ commit }, question_id) {
+      const question_item = await questionApi.getQuestionItem(question_id);
       commit("setQuestionItem", question_item);
     },
   },
