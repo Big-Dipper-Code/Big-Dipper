@@ -1,12 +1,12 @@
 <template>
-  <algorithm-view />
+  <algorithm-main />
 </template>
 
 <script>
-import AlgorithmView from "@/views/AlgorithmView";
+import AlgorithmMain from "@/components/Algorithm/AlgorithmMain";
 export default {
   name: "Algorithm",
-  components: { AlgorithmView },
+  components: { AlgorithmMain },
 };
 </script>
 

@@ -4,29 +4,19 @@
     :is="component_name"
     :code_block_item="code_block_item"
   />
-  {{ component_name }}
 </template>
 <script>
-import { useStore } from "vuex";
-// import { computed } from "vue";
+import IfBlock from "@/components/Algorithm/CodeBlock/IfBlock";
 
 export default {
   name: "CodeBlock",
+  components: { IfBlock },
   props: {
-    b_id: {
-      type: Number,
+    code_block_item: {
+      type: Object,
       required: true,
     },
   },
-  setup(props) {
-    const store = useStore();
-    const getCodeBlockItemById = store.getters["codeBlock/getCodeBlockItem"];
-    const code_block_item = getCodeBlockItemById(props.b_id);
-    return {
-      code_block_item,
-    };
-  },
-  watch: {},
   computed: {
     component_name: function () {
       let component_name = "";

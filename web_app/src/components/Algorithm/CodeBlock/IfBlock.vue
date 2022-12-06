@@ -1,6 +1,5 @@
 <template>
   <div>
-    IF
     <div class="if-block-content">
       <span> If </span>
       <template v-for="(item, index) in code_block_item.params" :key="index">
