@@ -1,7 +1,5 @@
 <template>
-  <vue-markdown :source="content">
-    <slot> </slot>
-  </vue-markdown>
+  <vue-markdown :source="content" />
 </template>
 
 <script>
