@@ -1,5 +1,10 @@
 <template>
   <div class="code-block-section">
+    <div class="code-button">
+      <b-button variant="primary" @click="onClickSelector"
+        >Show Selector</b-button
+      >
+    </div>
     <div class="code-block-wrap">
       <template v-for="(item, index) in code_block.items" :key="index">
         <code-block :code_block_item="item" />
@@ -17,6 +22,9 @@ export default {
   methods: {
     loadCodeBlock() {
       this.$store.dispatch("codeBlock/loadCodeBlock");
+    },
+    onClickSelector() {
+      this.$store.commit("sidebar/toggleSidebar");
     },
   },
   mounted() {
