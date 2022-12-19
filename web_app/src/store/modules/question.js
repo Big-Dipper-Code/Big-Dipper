@@ -13,9 +13,24 @@ const question = {
     async loadQuestionItem({ commit }, question_id) {
       const question_item = {
         q_id: 1,
-        title: "Question 1",
+        title: "별찍기-1",
         description:
-          "# Question 1\n\nThis is a question.\n\n## Question 1.1\n\nThis is a sub-question.\n\n## Question 1.2\n\nThis is another sub-question.\n\n## Question 1.3\n\nThis is yet another sub-question.\n\n## Question 1.4\n\nThis is the last sub-question.",
+          "# 별찍기-1\n" +
+          "## 문제 설명\n" +
+          "첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제\n" +
+          "## 예시\n" +
+          "### 입력\n" +
+          "```text\n" +
+          "5\n" +
+          "```\n" +
+          "### 출력\n" +
+          "```text\n" +
+          "*\n" +
+          "**\n" +
+          "***\n" +
+          "****\n" +
+          "*****\n" +
+          "```",
         created_at: "2021-01-01",
         updated_at: "2021-01-01",
         create_user: {

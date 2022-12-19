@@ -23,11 +23,14 @@ export default {
   },
   computed: {
     question_item() {
-      console.log(this);
       return this.$store.state.question.question_item;
     },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.question-section {
+  margin: 1rem;
+}
+</style>
