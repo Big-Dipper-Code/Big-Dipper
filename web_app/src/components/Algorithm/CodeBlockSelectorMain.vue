@@ -1,9 +1,11 @@
 <template>
+  <!-- 출력 -->
   <b-offcanvas
     :model-value="is_visible_sidebar"
     placement="end"
     @update="onUpdate"
   />
+  <span>CodeBlockSelectorMain</span>
 </template>
 
 <script>
