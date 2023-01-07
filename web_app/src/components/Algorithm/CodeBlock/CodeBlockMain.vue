@@ -2,9 +2,9 @@
   <!-- 출력 -->
   <div class="code-block-section">
     <div class="code-button">
-      <b-button variant="primary" @click="onClickSelector"
-        >Show Selector</b-button
-      >
+      <!--      <b-button variant="primary" @click="onClickSelector"-->
+      <!--        >Show Selector</b-button-->
+      <!--      >-->
       <div class="outer-box__button">
         <b-dropdown
           class="button__plus"

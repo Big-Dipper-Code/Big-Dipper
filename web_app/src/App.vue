@@ -3,13 +3,12 @@
     <!--    <router-link to="/">Home</router-link> |-->
     <!--    <router-link to="/about">About</router-link> |-->
     <!--    <router-link to="/algorithm">Algorithm</router-link>-->
-    <div class="d-inline">
+    <div class="outer-box__logo">
       <img
         src="./assets/Images/Big-Dipper-logo.png"
         alt="Big-Dipper-logo"
         class="logo"
       />
-      <div class="d-inline brand-name">BIG Dipper</div>
     </div>
   </nav>
   <router-view />
@@ -36,15 +35,15 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }*/
+.outer-box__logo {
+  display: flex;
+}
 .logo {
-  width: 50px;
-  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  width: 80px;
+  height: 80px;
 }
 .navbar-brand {
-  border: 1px solid black;
-}
-.brand-name {
-  font-size: 2rem;
-  margin-left: 1rem;
 }
 </style>
