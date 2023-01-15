@@ -37,6 +37,9 @@ const codeBlock = {
     setCodeBlock(state, code_block) {
       state.code_block = code_block;
     },
+    addCodeBlockItem(state, item) {
+      state.code_block.items.push(item);
+    },
   },
 };
 export default codeBlock;
