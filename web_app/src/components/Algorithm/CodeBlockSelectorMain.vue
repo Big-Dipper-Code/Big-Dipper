@@ -1,5 +1,5 @@
 <template>
-  <!-- 출력 -->
+  <!-- 제출 -->
   <b-offcanvas
     :model-value="is_visible_sidebar"
     placement="end"
