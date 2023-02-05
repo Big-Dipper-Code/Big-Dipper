@@ -32,12 +32,16 @@ export default {
     loadCodeBlock() {
       this.$store.dispatch("codeBlock/loadCodeBlock");
     },
+    runBlockItems() {
+      this.$store.dispatch("codeBlock/runBlockItems");
+    },
     onClickSelector() {
       this.$store.commit("sidebar/toggleSidebar");
     },
   },
   mounted() {
     this.loadCodeBlock();
+    this.runBlockItems();
   },
   computed: {
     code_block() {

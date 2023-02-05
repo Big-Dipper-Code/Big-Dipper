@@ -1,3 +1,5 @@
+import codeUtil from "@/utils/codeUtil";
+
 const codeBlock = {
   namespaced: true,
   state: () => ({
@@ -12,6 +14,49 @@ const codeBlock = {
         total: 1,
         items: [
           {
+            name: "assignment",
+            function: "assignment",
+            category: "control",
+            variable: {
+              name: "variable",
+              function: "variable",
+              value: "N",
+            },
+            expression: {
+              name: "expression",
+              function: "expression",
+              value: "1",
+            },
+          },
+          {
+            name: "assignment",
+            function: "assignment",
+            category: "control",
+            variable: {
+              name: "variable",
+              function: "variable",
+              value: "M",
+            },
+            expression: {
+              name: "expression",
+              function: "expression",
+              value: "2",
+            },
+          },
+          {
+            name: "output",
+            function: "output",
+            category: "control",
+            expression: {
+              name: "expression",
+              function: "expression",
+              category: "control",
+              value: "N + M",
+            },
+          },
+        ],
+        /*items: [
+          {
             b_id: 0,
             name: "",
             function: "if",
@@ -24,11 +69,16 @@ const codeBlock = {
           {
             function: "else",
           },
-        ],
+        ],*/
       };
       // const code_block = await axios.get;
       console.log("code_block: ", code_block);
       commit("setCodeBlock", code_block);
+    },
+    runBlockItems({ state }) {
+      const code_block = state.code_block;
+      codeUtil.runBlockItems(code_block.items);
+      console.log("code_block: ", code_block);
     },
   },
 
