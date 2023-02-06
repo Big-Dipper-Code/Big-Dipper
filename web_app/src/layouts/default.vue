@@ -1,8 +1,7 @@
 <template>
   <div>
-    뷰
+    <h1>Components</h1>
+
     <router-view />
-    레이아웃
-    <router-layout />
   </div>
 </template>
