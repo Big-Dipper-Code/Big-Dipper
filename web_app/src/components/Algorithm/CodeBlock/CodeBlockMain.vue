@@ -18,7 +18,7 @@
 <script>
 import CodeBlock from "@/components/Algorithm/CodeBlock/CodeBlock";
 import PlusButton from "@/components/Algorithm/CodeBlock/PlusButton.vue";
-// import ParamInput from "@/components/Algorithm/ParamInput.vue";
+// import ParamInput from "@/tests/Algorithm/ParamInput.vue";
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
