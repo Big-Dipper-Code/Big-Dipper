@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="if-block-content">
+    <div class="code-block end-if-block-content">
       <span> End If </span>
     </div>
   </div>

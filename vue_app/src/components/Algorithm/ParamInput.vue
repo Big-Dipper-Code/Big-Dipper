@@ -1,6 +1,6 @@
 <template>
-  <b-input
-    v-model="local_value"
+  <b-form-input
+    :value="value"
     :placeholder="placeholder"
     @input="$emit('input', $event)"
     @update="$emit('update', $event)"
@@ -29,7 +29,7 @@ export default {
   },
   watch: {
     value: function (newVal) {
-      this.local_value = newVal;
+      this.local_value = newVal.value;
     },
   },
 };
