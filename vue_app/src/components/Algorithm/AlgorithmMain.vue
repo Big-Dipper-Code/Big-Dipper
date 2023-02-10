@@ -36,9 +36,9 @@
 </template>
 
 <script>
-import QuestionMain from "@/components/Algorithm/Question/QuestionMain";
-import CodeBlockMain from "@/components/Algorithm/CodeBlock/CodeBlockMain";
-import CodeBlockSelectorMain from "@/components/Algorithm/CodeBlockSelectorMain";
+import QuestionMain from "@/components/Algorithm/Question/QuestionMain.vue";
+import CodeBlockMain from "@/components/Algorithm/CodeBlock/CodeBlockMain.vue";
+import CodeBlockSelectorMain from "@/components/Algorithm/CodeBlockSelectorMain.vue";
 
 export default {
   name: "AlgorithmMain",

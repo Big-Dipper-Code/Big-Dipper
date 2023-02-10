@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import CodeBlock from "@/components/Algorithm/CodeBlock/CodeBlock";
+import CodeBlock from "@/components/Algorithm/CodeBlock/CodeBlock.vue";
 export default {
   name: "IfBlock",
   components: { CodeBlock },

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import CodeBlock from "@/components/Algorithm/CodeBlock/CodeBlock";
+import CodeBlock from "@/components/Algorithm/CodeBlock/CodeBlock.vue";
 import PlusButton from "@/components/Algorithm/CodeBlock/PlusButton.vue";
 // import ParamInput from "@/tests/Algorithm/ParamInput.vue";
 // import { library } from "@fortawesome/fontawesome-svg-core";

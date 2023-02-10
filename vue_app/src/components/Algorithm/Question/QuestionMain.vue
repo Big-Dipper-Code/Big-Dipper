@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import MarkdownViewer from "@/components/Algorithm/MarkdownViewer";
+import MarkdownViewer from "@/components/Algorithm/MarkdownViewer.vue";
 
 export default {
   name: "QuestionMain",
