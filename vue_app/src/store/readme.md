@@ -9,7 +9,7 @@ https://vuex.vuejs.org/guide/structure.html
 │   ├── App.vue
 │   └── ...
 └── store
-    ├── router.js          # where we assemble modules and export the store
+    ├── index.js          # where we assemble modules and export the store
     ├── actions.js        # root actions
     ├── mutations.js      # root mutations
     └── modules
