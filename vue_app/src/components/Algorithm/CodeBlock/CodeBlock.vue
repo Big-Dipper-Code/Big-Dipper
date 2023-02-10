@@ -7,10 +7,12 @@
 </template>
 <script>
 import IfBlock from "@/components/Algorithm/CodeBlock/IfBlock.vue";
+import OutputBlock from "@/components/Algorithm/CodeBlock/OutputBlock.vue";
+import EndIfBlock from "@/components/Algorithm/CodeBlock/EndIfBlock.vue";
 
 export default {
   name: "CodeBlock",
-  components: { IfBlock },
+  components: { IfBlock, OutputBlock, EndIfBlock },
   props: {
     code_block_item: {
       type: Object,
@@ -23,6 +25,12 @@ export default {
       switch (this.code_block_item.function) {
         case "if":
           component_name = "IfBlock";
+          break;
+        case "output":
+          component_name = "OutputBlock";
+          break;
+        case "end-if":
+          component_name = "EndIfBlock";
           break;
         default:
           component_name = "";
