@@ -1,18 +1,18 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png" />
-    <b-button variant="primary"> bootstrapVue3 Test</b-button>
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="text-center">Big Dipper</div>
+    <div class="d-flex justify-content-center">
+      <b-button class="mr-3" to="/algorithm"> Algorithm </b-button>
+      <b-dropdown text="Block Test">
+        <b-dropdown-item to="/tests/if-block">If Block</b-dropdown-item>
+      </b-dropdown>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 export default {
   name: "home",
-  components: {
-    HelloWorld,
-  },
+  components: {},
 };
 </script>
