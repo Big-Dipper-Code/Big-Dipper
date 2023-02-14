@@ -1,7 +1,7 @@
 <template>
   <component
-    v-if="component_name !== ''"
     :is="component_name"
+    v-if="component_name !== ''"
     :code_block_item="code_block_item"
   />
 </template>
@@ -36,6 +36,7 @@ export default {
           component_name = "";
           break;
       }
+      
       return component_name;
     },
   },
