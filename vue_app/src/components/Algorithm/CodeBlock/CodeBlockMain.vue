@@ -8,7 +8,10 @@
       <plus-button />
     </div>
     <div class="code-block-wrap">
-      <template v-for="(item, index) in code_block.items" :key="index">
+      <template
+        v-for="(item, index) in code_block.items"
+        :key="index"
+      >
         <code-block :code_block_item="item" />
       </template>
     </div>
@@ -28,6 +31,15 @@ export default {
   data() {
     return {};
   },
+  computed: {
+    code_block() {
+      return this.$store.state.codeBlock.code_block;
+    },
+  },
+  mounted() {
+    this.loadCodeBlock();
+    this.runBlockItems();
+  },
   methods: {
     loadCodeBlock() {
       this.$store.dispatch("codeBlock/loadCodeBlock");
@@ -37,15 +49,6 @@ export default {
     },
     onClickSelector() {
       this.$store.commit("sidebar/toggleSidebar");
-    },
-  },
-  mounted() {
-    this.loadCodeBlock();
-    this.runBlockItems();
-  },
-  computed: {
-    code_block() {
-      return this.$store.state.codeBlock.code_block;
     },
   },
 };
