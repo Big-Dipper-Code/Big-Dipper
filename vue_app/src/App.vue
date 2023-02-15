@@ -8,7 +8,7 @@
         src="./assets/Images/Big-Dipper-logo.png"
         alt="Big-Dipper-logo"
         class="logo"
-      />
+      >
     </div>
   </nav>
   <router-view />
