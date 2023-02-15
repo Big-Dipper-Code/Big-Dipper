@@ -1,9 +1,15 @@
 <template>
   <div>
-    <div class="if-block-content">
+    <div class="code-block input-block-content">
       <span> InputBlock </span>
-      <template v-for="(item, index) in code_block_item.params" :key="index">
-        <param-input :value="item" @input="onParamInput(index, $event)" />
+      <template
+        v-for="(item, index) in code_block_item.params"
+        :key="index"
+      >
+        <param-input
+          :value="item"
+          @input="onParamInput(index, $event)"
+        />
       </template>
     </div>
   </div>

@@ -2,9 +2,6 @@
   <!-- 제출 -->
   <div class="code-block-section">
     <div class="code-button">
-      <!--      <b-button variant="primary" @click="onClickSelector"-->
-      <!--        >Show Selector</b-button-->
-      <!--      >-->
       <plus-button />
     </div>
     <div class="code-block-wrap">
@@ -15,6 +12,9 @@
         <clickable-code-block :code_block_item="item" />
         <!--        <code-block :code_block_item="item" />-->
       </template>
+      <v-btn>
+        하이
+      </v-btn>
     </div>
   </div>
 </template>

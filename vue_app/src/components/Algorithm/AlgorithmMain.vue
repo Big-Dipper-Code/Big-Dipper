@@ -1,36 +1,38 @@
 <template>
   <div class="algorithm-section">
-    <div class="d-none d-lg-block">
-      <div>
-        <div class="algorithm-problem-wrap">
-          <question-main />
-        </div>
-        <div class="algorithm-input-wrap">
-          <code-block-main />
-        </div>
-        <div class="algorithm-output-wrap">
-          <code-block-selector-main />
-        </div>
-      </div>
-    </div>
-    <div class="d-lg-none">
-      <b-tabs content-class="mt-3">
-        <b-tab title="문제" active>
+    <div class="">
+      <v-tabs
+        v-model="tab"
+      >
+        <v-tab
+          value="problem"
+        >
+          item problem
+        </v-tab>
+        <v-tab value="submit">
+          item submit
+        </v-tab>
+        <v-tab value="output">
+          item output
+        </v-tab>
+      </v-tabs>
+      <v-window v-model="tab">
+        <v-window-item value="problem">
           <div class="algorithm-problem-wrap">
             <question-main />
           </div>
-        </b-tab>
-        <b-tab title="제출">
+        </v-window-item>
+        <v-window-item value="submit">
           <div class="algorithm-input-wrap">
             <code-block-main />
           </div>
-        </b-tab>
-        <b-tab title="출력">
+        </v-window-item>
+        <v-window-item value="output">
           <div class="algorithm-output-wrap">
             <code-block-selector-main />
           </div>
-        </b-tab>
-      </b-tabs>
+        </v-window-item>
+      </v-window>
     </div>
   </div>
 </template>
@@ -43,6 +45,11 @@ import CodeBlockSelectorMain from "@/components/Algorithm/CodeBlockSelectorMain.
 export default {
   name: "AlgorithmMain",
   components: { CodeBlockMain, QuestionMain, CodeBlockSelectorMain },
+  data() {
+    return {
+      tab: null,
+    };
+  },
 };
 </script>
 

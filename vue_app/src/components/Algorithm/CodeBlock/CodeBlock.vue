@@ -9,10 +9,13 @@
 import IfBlock from "@/components/Algorithm/CodeBlock/IfBlock.vue";
 import OutputBlock from "@/components/Algorithm/CodeBlock/OutputBlock.vue";
 import EndIfBlock from "@/components/Algorithm/CodeBlock/EndIfBlock.vue";
+import ForBlock from "@/components/Algorithm/CodeBlock/ForBlock.vue";
+import WhileBlock from "@/components/Algorithm/CodeBlock/WhileBlock.vue";
+import InputBlock from "@/components/Algorithm/CodeBlock/InputBlock.vue";
 
 export default {
   name: "CodeBlock",
-  components: { IfBlock, OutputBlock, EndIfBlock },
+  components: { IfBlock, OutputBlock, EndIfBlock, ForBlock, WhileBlock, InputBlock },
   props: {
     code_block_item: {
       type: Object,
@@ -32,11 +35,20 @@ export default {
         case "end-if":
           component_name = "EndIfBlock";
           break;
+        case "for":
+          component_name = "ForBlock";
+          break;
+        case "while":
+          component_name = "WhileBlock";
+          break;
+        case "input":
+          component_name = "InputBlock";
+          break;
         default:
           component_name = "";
           break;
       }
-      
+
       return component_name;
     },
   },

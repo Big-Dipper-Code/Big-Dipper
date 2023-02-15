@@ -1,29 +1,20 @@
 <template>
   <div class="outer-box__button">
-    <b-dropdown
-      class="button__plus"
-      size="lg"
-      variant="link"
-      toggle-class="text-decoration-none"
-      no-caret
-    >
-      <template #button-content>
-        <i class="fa-solid fa-plus"></i>
-      </template>
-      <b-dropdown-item href="#" @click="clickIfBlock">if 블록 </b-dropdown-item>
-      <b-dropdown-item href="#" @click="clickForBlock"
-        >for 블록</b-dropdown-item
-      >
-      <b-dropdown-item href="#" @click="clickWhileBlock"
-        >while 블록</b-dropdown-item
-      >
-      <b-dropdown-item href="#" @click="clickInputBlock"
-        >input 블록</b-dropdown-item
-      >
-      <b-dropdown-item href="#" @click="clickOutputBlock"
-        >output 블록</b-dropdown-item
-      >
-    </b-dropdown>
+    <div @click="clickIfBlock">
+      If 블록
+    </div>
+    <div @click="clickForBlock">
+      for 블록
+    </div>
+    <div @click="clickWhileBlock">
+      while 블록
+    </div>
+    <div @click="clickInputBlock">
+      input 블록
+    </div>
+    <div @click="clickOutputBlock">
+      output 블록
+    </div>
   </div>
 </template>
 
