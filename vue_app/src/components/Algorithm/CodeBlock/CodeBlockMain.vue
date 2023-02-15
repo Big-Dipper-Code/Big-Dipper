@@ -12,7 +12,8 @@
         v-for="(item, index) in code_block.items"
         :key="index"
       >
-        <code-block :code_block_item="item" />
+        <clickable-code-block :code_block_item="item" />
+        <!--        <code-block :code_block_item="item" />-->
       </template>
     </div>
   </div>
@@ -21,13 +22,14 @@
 <script>
 import CodeBlock from "@/components/Algorithm/CodeBlock/CodeBlock.vue";
 import PlusButton from "@/components/Algorithm/CodeBlock/PlusButton.vue";
+import ClickableCodeBlock from "@/components/Algorithm/CodeBlock/ClickableCodeBlock.vue";
 // import ParamInput from "@/tests/Algorithm/ParamInput.vue";
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
   name: "CodeBlockMain",
-  components: { PlusButton, CodeBlock },
+  components: { PlusButton, CodeBlock, ClickableCodeBlock },
   data() {
     return {};
   },
