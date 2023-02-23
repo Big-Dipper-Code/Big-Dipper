@@ -1,6 +1,6 @@
 <template>
   <div>
-    <plus-button v-if="focused" />
+    <!--    <plus-button v-if="focused" />-->
     <v-btn
       class="code-block"
       @focus="onFocus"
@@ -8,7 +8,7 @@
     >
       <code-block :code_block_item="code_block_item" />
     </v-btn>
-    <plus-button v-if="focused" />
+    <!--    <plus-button v-if="focused" />-->
   </div>
 </template>
 
