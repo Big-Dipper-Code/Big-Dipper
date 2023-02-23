@@ -3,7 +3,8 @@ import * as VueRouter from 'vue-router';
 const routes = [
   {
     path: '/',
-    component: () => import('@/pages/index.vue')
+    component: () => import('@/pages/index.vue'),
+    redirect: '/algorithm',
   },
   {
     path: '/algorithm',
