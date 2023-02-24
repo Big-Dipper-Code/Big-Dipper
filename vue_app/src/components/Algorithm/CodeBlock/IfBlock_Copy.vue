@@ -1,42 +1,26 @@
 <template>
-  <v-card
-    class="ma-2"
-    variant="outlined"
-  >
-    <!--align center-->
-    <v-card-title
-      class="d-flex align-center"
-    >
-      <span
-        class="mr-2"
-      >
-        If
-      </span>
-      <span
-        class="mr-2 text-grey"
-      >
-        #{{ code_block_item.id || "0000" }}
-      </span>
-
+  <div>
+    <div class="code-block if-block-content">
+      <span> If </span>
       <template
         v-for="(item, index) in code_block_item.params"
         :key="index"
       >
-        <condition-input
+        <param-input
           :value="item.value"
           @input="onParamInput(index, $event)"
         />
       </template>
-    </v-card-title>
-  </v-card>
+    </div>
+  </div>
 </template>
 
 <script>
-import ConditionInput from "@/components/Algorithm/CodeBlock/ConditionInput.vue";
+import ParamInput from "@/components/Algorithm/ParamInput.vue";
 
 export default {
   name: "IfBlock",
-  components: { ConditionInput},
+  components: {ParamInput},
   props: {
     code_block_item: {
       type: Object,

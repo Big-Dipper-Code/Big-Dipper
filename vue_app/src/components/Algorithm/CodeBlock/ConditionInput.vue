@@ -2,16 +2,17 @@
   <v-text-field
     v-model="local_value"
     class=""
-    :label="Label"
+    label="Condition"
     :placeholder="placeholder"
     hide-details="auto"
+    clearable
     @input="$emit('input', $event)"
   />
 </template>
 
 <script>
 export default {
-  name: "ParamInput",
+  name: "ConditionInput",
   props: {
     value: {
       type: String,
@@ -23,7 +24,7 @@ export default {
       default: "",
     },
   },
-  setup() {
+  data() {
     return {
       local_value: "",
     };
@@ -36,4 +37,6 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

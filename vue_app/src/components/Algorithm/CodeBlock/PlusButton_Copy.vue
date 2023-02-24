@@ -1,20 +1,21 @@
 <template>
-  <div class="outer-box__button" />
-
-  <v-btn-group>
-    <template
-      v-for="(value, index) in Object.entries(blockConfig)"
-      :key="index"
-    >
-      <v-btn
-        color="info"
-        @click="onClickFunction(value[0])"
-      >
-        <v-icon>mdi-plus</v-icon>
-        {{ value[0].toUpperCase() }}
-      </v-btn>
-    </template>
-  </v-btn-group>
+  <div class="outer-box__button">
+    <div @click="clickIfBlock">
+      If 블록
+    </div>
+    <div @click="clickForBlock">
+      for 블록
+    </div>
+    <div @click="clickWhileBlock">
+      while 블록
+    </div>
+    <div @click="clickInputBlock">
+      input 블록
+    </div>
+    <div @click="clickOutputBlock">
+      output 블록
+    </div>
+  </div>
 </template>
 
 <script>
@@ -79,11 +80,26 @@ export default {
     addCodeBlockItem(item) {
       this.$store.commit("codeBlock/addCodeBlockItem", item);
     },
-    onClickFunction(functionName){
-      console.log(functionName)
-      this.addCodeBlockItem(this.blockConfig[functionName]);
+    clickIfBlock() {
+      console.log("clickIfBlock");
+      this.addCodeBlockItem(this.blockConfig["if"]);
     },
-
+    clickForBlock() {
+      console.log("clickForBlock");
+      this.addCodeBlockItem(this.blockConfig["for"]);
+    },
+    clickWhileBlock() {
+      console.log("clickWhileBlock");
+      this.addCodeBlockItem(this.blockConfig["while"]);
+    },
+    clickInputBlock() {
+      console.log("clickInputBlock");
+      this.addCodeBlockItem(this.blockConfig["input"]);
+    },
+    clickOutputBlock() {
+      console.log("clickOutputBlock");
+      this.addCodeBlockItem(this.blockConfig["output"]);
+    },
   },
 };
 </script>
