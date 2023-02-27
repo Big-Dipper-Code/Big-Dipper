@@ -1,36 +1,52 @@
+import React from 'react'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Button from '@mui/material/Button';
+import { BrowserRouter as Router, Route, Link, Routes, Outlet } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Dashboard from './pages/DashBoard';
+import NoMatch from './pages/NoMatch';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-        <Button variant="contained">Hello World ##</Button>
-    </div>
-  )
+export default function App() {
+    return (
+        <div>
+            <h1>Big-Dipper</h1>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="*" element={<NoMatch />} />
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
-export default App
+function Layout() {
+    return (
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                    <li>
+                        <Link to="/nothing-here">Nothing Here</Link>
+                    </li>
+                </ul>
+            </nav>
+
+            <hr />
+            <Outlet />
+        </div>
+    );
+}
