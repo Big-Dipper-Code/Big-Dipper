@@ -1,17 +1,29 @@
 import React from 'react'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import Button from '@mui/material/Button';
-import { BrowserRouter as Router, Route, Link, Routes, Outlet } from 'react-router-dom';
+import { AppBar, Tabs, Tab } from '@mui/material';
+import { Route, Link, Routes, Outlet } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Dashboard from './pages/DashBoard';
 import NoMatch from './pages/NoMatch';
 
 export default function App() {
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = () => {
+        setValue(3);
+    };
+
     return (
         <div>
+            <AppBar position="static">
+                <Tabs value={value} onChange={handleChange} aria-label="Main Tabs">
+                    <Tab label="Home" />
+                    <Tab label="About" />
+                    <Tab label="dashboard" />
+                </Tabs>
+            </AppBar>
+
             <h1>Big-Dipper</h1>
             <Routes>
                 <Route path="/" element={<Layout />}>
