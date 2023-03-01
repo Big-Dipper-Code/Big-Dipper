@@ -2,6 +2,8 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { useDispatch} from "react-redux";
 import { decrement, increment } from "@/utils/slices/counterSlice";
+import Button from "@mui/material/Button";
+import AbcIcon from '@mui/icons-material/Abc';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -9,8 +11,11 @@ const Home = () => {
     <div>
       <h1>Home</h1>
 
-      <button onClick={() => dispatch(increment())}>Increase</button>
-      <button onClick={() => dispatch(decrement())}>Decrease</button>
+      <Button variant="contained" onClick={() => dispatch(increment())}>Increase</Button>
+      <Button variant="contained" onClick={() => dispatch(decrement())}>
+        <AbcIcon/>
+        Decrease
+      </Button>
         <Outlet/>
     </div>
   );

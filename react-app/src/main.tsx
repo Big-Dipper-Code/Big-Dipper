@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom';
-import { Provider } from "react-redux";
-import './index.css'
+import { RouterProvider } from 'react-router-dom'
+import { Provider } from "react-redux"
+
 import router from './router'
 import store from './store'
+
+import '@/styles/main.scss'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <Provider store={store}>
