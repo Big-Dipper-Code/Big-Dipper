@@ -2,12 +2,12 @@ import {
     createBrowserRouter,
     RouteObject
 } from "react-router-dom";
-import Home from "./pages/Home";
 import ProblemResult from "@/pages/problem-result/ProblemResultPage";
+import HomePage from "@/pages/HomePage";
 
 const routes: RouteObject[] = [{
     path: "/",
-    element: <Home />,
+    element: <HomePage />,
     children: [
         {
             path: "/problem-result",
