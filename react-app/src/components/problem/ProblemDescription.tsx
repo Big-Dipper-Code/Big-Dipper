@@ -1,19 +1,33 @@
 import React, { ReactNode } from 'react'
-
+import ReactMarkdown from 'react-markdown'
 interface Props {
     children?: ReactNode
     // any props that come into the component
 }
 
 const ProblemDescription = ({ children }: Props) => {
+    const markdown = `
+# 별찍기-1 
+
+## 문제 설명 
+첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제 
+## 예시 
+### 입력 
+\`\`\`text 
+5
+\`\`\` 
+### 출력 
+\`\`\`text 
+* 
+** 
+*** 
+**** 
+***** 
+\`\`\`
+`
     return (
         <div>
-            안녕하세요.2222
-            <br />
-            스마트폰으로 간단하게 코드를2223333
-            <br />
-            작성 하여, 알고리즘을 풀어보세요.
-            {children}
+            <ReactMarkdown>{markdown}</ReactMarkdown>
         </div>
     )
 }
