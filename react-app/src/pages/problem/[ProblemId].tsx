@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Tabs, Tab, AppBar } from '@mui/material'
 import ProblemDescription from '@/components/problem/ProblemDescription'
 // import OutputExample from "@/components/problem/OutputExample";
+import Hello from '@/pages/hello/Hello'
 
 interface TabPanelProps {
     children?: React.ReactNode
@@ -58,7 +59,7 @@ export default function _ProblemId() {
                 {/* </OutputExample> */}
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Item Two
+                <Hello />
             </TabPanel>
             <TabPanel value={value} index={2}>
                 Item Three
